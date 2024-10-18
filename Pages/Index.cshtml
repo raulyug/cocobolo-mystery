@@ -1,0 +1,71 @@
+﻿@page
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Mistério da Família Cocobolo</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #pista p {
+            white-space: normal;
+            /* Permite quebra de linha */
+            word-wrap: break-word;
+            /* Quebra palavras longas */
+        }
+
+        .highlight {
+            color: rgb(255, 0, 0);
+        }
+
+        .highlightKiki {
+            color: rgb(187, 153, 0);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vignette-container">
+        <div class="container" id="initialContent">
+            <h1>VOCÊ FOI <span class="highlight">ESCOLHIDA</span>!</h1>
+            <p>Honre a família Cocobolo e ache o tesouro.</p>
+            <button onclick="revelarPista()">Revelar Pista</button>
+        </div>
+        <div class="container hidden" id="pista">
+            <p>Dizem que os inúmeros <span class="highlightKiki">Guardiões KiKi-Bolo</span> guardam o grande segredo!</p>
+            <ul class="bullet-points">
+                <li>Estão sempre por perto, mas nunca são vistos.</li>
+                <li>Estão na escuridão porém iluminados.</li>
+                <li>Eles são a chave para o tesouro!</li>
+            </ul>
+            <a href="/donut">Encontrei!</a>
+        </div>
+    </div>
+
+    <script>
+        function revelarPista() {
+            document.getElementById('initialContent').classList.add('hidden');
+            document.getElementById('pista').classList.remove('hidden');
+            mudarImagem();
+        }
+        function mudarImagem() {
+            document.body.style.backgroundImage = "url('/images/background-donut.jpeg')";
+            document.body.style.backgroundPosition = "left center";
+            document.body.style.backgroundSize = "50% 70%";
+            document.body.style.backgroundRepeat = "no-repeat";
+        }	
+    </script>
+</body>
+
+</html>

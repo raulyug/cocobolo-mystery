@@ -1,0 +1,80 @@
+@page
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Tesouro Misterioso</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+        body {
+            background-image: url("/images/background-parabens.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Fancy', sans-serif;
+            font-size: 32px;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            .container {
+                text-align: center;
+                left: -12%;
+                padding: 40px;
+                background-color: rgb(53, 30, 9);
+                border-radius: 5px;
+                width: 100%;
+                max-width: 600px;
+                box-sizing: border-box;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin-top: 10px;
+                background-color: #125302a8;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+
+            #feedback p {
+                margin-top: 10px;
+            }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Parabéns! Você encontrou a pista.</h1>
+        <p>Agora, resolva este enigma:</p>
+        <p><strong>Os guardiões deixaram uma palavra secreta no bilhete! Que palavra eles esconderam? </strong></p>
+        <input type="text" id="resposta" placeholder="Digite a resposta" />
+        <button onclick="verificar()">Verificar</button>
+
+        <div id="feedback"></div>
+    </div>
+
+    <script>
+        function verificar() {
+            const resposta = document.getElementById('resposta').value.toLowerCase();
+            const feedback = document.getElementById('feedback');
+            if (resposta === 'donut') {
+                feedback.innerHTML = `<p>Correto! Siga para a próxima etapa:</p><a href="/fim">CLIQUE AQUI</a>`;
+            } else {
+                feedback.innerHTML = '<p>Resposta incorreta. Tente novamente!</p>';
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>

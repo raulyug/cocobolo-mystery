@@ -1,0 +1,51 @@
+body {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 57%;
+  background-color: rgb(24, 11, 2);
+  font-family: 'Fancy', sans-serif;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 70%, rgba(0, 0, 0, 0.5)90%);
+  pointer-events: none; /* overlay nao interfere com o conteudo */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+  position: relative; 
+  right: -200px; 
+  top: -20px; 
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ad7803;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6e4302;
+}

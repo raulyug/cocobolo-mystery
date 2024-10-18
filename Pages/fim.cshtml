@@ -1,0 +1,45 @@
+@page
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Tesouro!</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+        #pista p {
+            white-space: normal;
+            /* Permite quebra de linha */
+            word-wrap: break-word;
+            /* Quebra palavras longas */
+        }
+
+        .highlight {
+            color: rgb(187, 153, 0);
+        }
+        .highlightRed {
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="pista">
+        <h1><span class="highlight">Parabens</span>! A Familia Cocobolo lhe informa:</h1>
+        <p> O tesouro está trancado pela <span class="highlightRed">chave mais fedorenta</span>!</p>
+        <p>Ache-o e que o Deus Miau lhe proteja.</p>
+    </div>
+
+    <script>
+        function mudarImagem() {
+            document.body.style.backgroundImage = "url('/images/background-fim.jpg')";
+            document.body.style.backgroundPosition = "left center";
+            document.body.style.backgroundSize = "50% 100%";
+            document.body.style.backgroundRepeat = "no-repeat";
+        }
+        mudarImagem()
+    </script>
+</body>
+
+</html>
